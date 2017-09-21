@@ -25,8 +25,9 @@
 	let geimskip2 = Object.create(geimskip);
 	let geimskip3 = Object.create(geimskip);
 	//document.write(geimskip.speed);
-	document.getElementById('hradi').innerHTML = geimskip3.speed;
+	document.getElementById('hradi').innerHTML = this.speed;
 	//geimskip.constructor.speed;
+	geimskip.prototype.constructor = geimskip;
 	geimskip.prototype.speed = 5;
 	geimskip.prototype.fly = function() {
 		
