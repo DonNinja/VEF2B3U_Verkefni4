@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Annar Hluti</title>
+</head>
+<body>
+	<div>
+		<p id="demo"></p>
+		<p id="hradi"></p>
+	</div>
+	<!--script src="main.js"></script-->
+	<script type="text/javascript">
+		let geimskip = {
+		name: "SpaceRacer",
+		life: 10,
+		showName: function() {
+			return this.name();
+		}
+	};
+
+	let geimskip1 = Object.create(geimskip);
+	geimskip1.name = "Lead SpaceRacer";
+	document.getElementById('demo').innerHTML = "<p>Fyrsta geimskipið heitir núna " + geimskip1.name + "</p>";
+	let geimskip2 = Object.create(geimskip);
+	let geimskip3 = Object.create(geimskip);
+	//document.write(geimskip.speed);
+	document.getElementById('hradi').innerHTML = geimskip3.speed;
+	//geimskip.constructor.speed;
+	geimskip.prototype.speed = 5;
+	geimskip.prototype.fly = function() {
+		
+	}
+	</script>
+</body>
+</html>
