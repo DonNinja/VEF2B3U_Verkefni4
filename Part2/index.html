@@ -11,15 +11,21 @@
 	</div>
 	<!--script src="main.js"></script-->
 	<script type="text/javascript">
-		let geimskip = {
+	/*	let geimskip = {
 		name: "SpaceRacer",
 		life: 10,
 		showName: function() {
 			return this.name();
 		}
-	};
+	};*/
 
-	let geimskip1 = Object.create(geimskip);
+	function Geimskip(name, life) {
+		this.name = name;
+		this.life = life;
+	}
+
+	var geimskip1 = new Geimskip('SpaceRacer', 10)
+
 	geimskip1.name = "Lead SpaceRacer";
 	document.getElementById('demo').innerHTML = "<p>Fyrsta geimskipið heitir núna " + geimskip1.name + "</p>";
 	let geimskip2 = Object.create(geimskip);
@@ -27,7 +33,7 @@
 	//document.write(geimskip.speed);
 	document.getElementById('hradi').innerHTML = this.speed;
 	//geimskip.constructor.speed;
-	geimskip.prototype.constructor = geimskip;
+	geimskip.prototype.constructor = Geimskip;
 	geimskip.prototype.speed = 5;
 	geimskip.prototype.fly = function() {
 		

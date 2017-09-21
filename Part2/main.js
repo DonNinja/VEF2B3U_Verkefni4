@@ -1,4 +1,4 @@
-		let geimskip = {
+	/*	let geimskip = {
 		name: "SpaceRacer",
 		life: 10,
 		showName: function() {
@@ -18,4 +18,4 @@
 	geimskip.prototype.speed = 5;
 	geimskip.prototype.fly = function() {
 		
-	}
+	}*/
